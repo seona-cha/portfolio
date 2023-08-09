@@ -15,7 +15,7 @@ body.dark{
     align-items: center;
     position: relative;
     width: 100%;
-    height: 110vh;
+    height: 100vh;
 }
 .sc-intro::after{
     display: block;
@@ -61,6 +61,9 @@ body.dark{
     color: #fff;
     content:'THE WEB';
 }
+.dark .sc-intro .main-text::before{
+    color: #532e75;
+}
 .sc-intro .sub-text{
     padding-left: 250px;
     font-size: 150px;
@@ -76,6 +79,9 @@ body.dark{
     word-break: keep-all;
     white-space: wrap;
     text-transform: uppercase;
+}
+.sc-intro .text-box .mini-text br{
+    display: none;
 }
 .sc-intro .line{
     position: absolute;
@@ -167,7 +173,7 @@ body.dark{
     color: rgba(255,255,255,0.3);
     text-align: right;
     white-space: wrap;
-    content:'1 2 3 4 5 6 7 8 9 10'
+    content:'1 2 3 4 5 6 7 8 9 10 11'
 }
 .sc-about .purple{color: #dd23ce;}
 .sc-about .yellow{color: #f8eb3b;}
@@ -384,15 +390,19 @@ body.dark{
     .sc-intro .text-box { width: 900px; }
     .sc-intro .main-text { font-size: 120px; }
     .sc-intro .sub-text { font-size: 100px; }
-    .sc-intro .mini-text { font-size: 14px; }
+    .sc-intro .text-box .mini-text { 
+        width: 240px;
+        font-size: 14px; 
+        text-indent: 30px;
+    }
 
     @keyframes line{
         from{ height:100px;}
         to{ height:90px;}
     }
     .sc-intro .img-box{
-        width: 300px;
-        height: 200px;
+        width: 350px;
+        height: 490px;
     }
     /* about */
     .sc-about .marquee-banner{ margin-left: -540px; }
@@ -460,6 +470,10 @@ body.dark{
         margin-top: 15px;
         margin-left: 50px;
         font-size: 10px; 
+    }
+    .sc-intro .img-box{
+        width: 280px;
+        height: 380px;
     }
     /* about */
     .sc-about{ padding: 60px 0; }
@@ -563,6 +577,13 @@ body.dark{
         font-size: 10px; 
         margin: 0;
     }
+    .sc-intro .text-box .mini-text{
+        display: inline;
+    }
+    .sc-intro .img-box{
+        width: 240px;
+        height: 350px;
+    }
     /* about */
     .sc-about{ padding: 40px 0; }
     .sc-about .marquee-banner{ margin-left: -240px; }
@@ -591,15 +612,10 @@ body.dark{
     }
     .sc-about .code pre {
         overflow-x: scroll;
-        padding: 0 0 0 20px ;
+        padding: 0;
     }
     .sc-about .text-box pre:before{
-        left: 0px;
-        content:'1 2 3 4 5 6 7 8';
-        font-size: 10px;
-        width: 10px;
-        height: auto;
-        white-space: wrap;
+        display: none;
     }
     .sc-about .desc{ 
         font-size: 14px;
