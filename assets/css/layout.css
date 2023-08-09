@@ -354,6 +354,9 @@ body.dimmed{
     
 }
 @media (max-width:719px){
+    .cursor{
+        display: none;
+    }
     .gnb-wrapper .area-3,
     .gnb-wrapper .area-4{
         display: none;

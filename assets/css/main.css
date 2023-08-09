@@ -577,6 +577,10 @@ body.dark{
         width: 320px; 
         margin-bottom: 20px;
     }
+    .sc-about .text-box{
+        width: 100%;
+        padding: 5%;
+    }
     .sc-about .code{
         width: 100%;
         padding: 2.5%;
@@ -607,13 +611,27 @@ body.dark{
     .sc-work .work-item a:first-child:hover{
         padding-bottom: 0px;
     }
-    .sc-work .title{ font-size: 30px; }
-    .sc-work .title span{ font-size: 18px;}
-    .sc-work .desc{ font-size: 13px; }
+    .sc-work .work-item .text-box{
+        padding: 0 10px ;
+    }
+    .sc-work .title{ 
+        padding-top: 15px;
+        font-size: 20px; 
+    }
+    .sc-work .title span{ font-size: 14px;}
+    .sc-work .work-item .title::before{
+        top: 0px; left: 0px;
+        font-size: 10px;
+    }
+    .sc-work .desc{ 
+        margin-top: 12px;
+        font-size: 13px;
+        line-height: 18px;
+    }
     .sc-work .hash{ 
-        margin-top: 5px;
+        margin-top: 8px;
         font-size: 11px; 
-        line-height: 19px;
+        line-height: 16px;
     }
     .sc-work .hash span{ white-space: nowrap; }
     .sc-work .link-review svg{
