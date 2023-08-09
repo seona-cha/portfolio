@@ -149,6 +149,7 @@ body.dark{
     margin: 100px auto 60px;
 }
 .sc-about .code{
+    overflow: hidden;
     font-size: 20px;
     background: rgba(0,0,0,0.6);
     border-radius: 10px;
