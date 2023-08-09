@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Publisher PortFolio</title>
+
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/grained@0.0.2/grained.min.js"></script>
+    <script src="./assets/js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo"><a href="#">Chacha;</a></h1>
+        <button id="gnbToggle" class="open"></button>
+        <aside class="gnb-wrapper">
+            <h2 class="blind">메뉴 열림</h2>
+            <div class="area-1">
+                <P>How To Contact:</P>
+                <p>
+                    Phone:<br>
+                    +82 010-3917-5026<br>
+                    E-mail:<br>
+                    peche0345@naver.com
+                </p>
+            </div>
+            <div class="area-2">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav" href="#home">HOME <span aria-hidden="true">HOME</span></a></li>
+                    <li class="nav-item"><a class="nav" href="#about">ABOUT<span aria-hidden="true">ABOUT</span></a></li>
+                    <li class="nav-item"><a class="nav" href="#works">WORKS<span aria-hidden="true">WORKS</span></a></li>
+                    <li class="nav-item"><a class="nav" href="#contact">CONTACT<span aria-hidden="true">CONTACT</span></a></li>
+                </ul>
+            </div>
+            <div class="area-3">
+                <div class="marquee">
+                    <span>WEB PUBLISHER </span>
+                    <span>WEB PUBLISHER </span>
+                    <span>WEB PUBLISHER </span>
+                </div>
+            </div>
+            <div class="area-4"></div>
+        </aside>
+    </header>
+    <main class="container">
+        <section class="sc-intro" id="home">
+            <h2 class="blind">인트로</h2>
+            <div class="text-box">
+                <p class="sub-text">Dive into-</p>
+                <div class="row">
+                    <p class="main-text">the web</p>
+                    <p class="mini-text">
+                        I have a passion to grow like a universe that is constantly expanding. Like a black hole, i will absorb knowledge and grow myself more and more.
+                    </p>
+                </div>
+                <p class="sub-text">- universe</p>
+            </div>
+            <div class="img-box">
+                <img src="./assets/images/rocket2.gif" alt="rocket">
+            </div>
+            <div class="line"></div>
+        </section>
+        <section class="sc-about" id="about">
+            <h2 class="blind">자기소개</h2>
+            <div class="marquee-banner">
+                <span>ABOUT ME -</span>
+                <span>ABOUT ME -</span>
+                <span>ABOUT ME -</span>
+                <span>ABOUT ME -</span>
+                <span>ABOUT ME -</span>
+                <span>ABOUT ME -</span>
+                <span>ABOUT ME -</span>
+            </div>
+            <div class="inner">
+                <div class="img-box">
+                    <img src="./assets/images/emoji.png" alt="">
+                </div>
+                <div class="text-box">
+                    <div class="code">
+                        <pre>
+    <span class="sky">items</span> : <span class="purple">[</span>
+        <span class="blue">{</span>
+            <span class="sky">"name"</span> : <span class="orange">"차선아"</span>,
+            <span class="sky">"age"</span> : <span class="green">26</span>,
+            <span class="sky">"skills"</span> : <span class="yellow">[</span> <span class="orange">"html"</span>, <span class="orange">"css"</span>, <span class="orange">"jquery"</span> <span class="yellow">]</span> 
+            <span class="sky">"character"</span> : <span class="yellow">[</span> <span class="orange">"긍정적인"</span>, <span class="orange">"유연한"</span>, <span class="orange">"열정적인"</span>, <span class="orange">"친화력이 좋은"</span>, <span class="orange">"변화에 금방 적응하는"</span> <span class="yellow">]</span>
+        <span class="blue">}</span>
+    <span class="purple">]</span>
+</pre>
+                    </div>
+                    <p class="desc">안녕하세요. 웹 퍼블리셔 차선아입니다. <span class="hi">👋</span><br> 성장을 향한 열정으로 끊임없이 배우며 발전해나가는것이 모토입니다. <br>어려운 문제도 피하지 않고 도전하며, 해결해나가는 쾌감에 중독되어 있습니다.</p>
+                </div>
+            </div>
+        </section>
+        <section class="sc-work" id="works">
+            <h2 class="headline">WORKS</h2>
+            <ul class="work-list">
+                <li class="work-item">
+                    <a href="https://seona-cha.github.io/seoul/" data-img="#img1" target="_blank">
+                        <figure class="img-box">
+                            <img src="./assets/images/seoul.jpg" alt>
+                        </figure>
+                        <div class="text-box">
+                            <strong class="title">Seoul City Hall</strong>
+                            <p class="desc">IR기법, WAI-ARIA로 웹 접근성에 초점을 맞추고, TAB 컨트롤로 키보드로 접근하는 사용자의 편의성을 높여 <br>클론코딩한 PC 적응형 사이트입니다. </p>
+                            <p class="hash">
+                                <span>#PC</span>
+                                <span>#적응형</span>
+                                <span>#시멘틱 웹</span>
+                                <span>#swiper.js 커스텀</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="https://velog.io/@peche0345/%EC%84%9C%EC%9A%B8%EC%8B%9C%EC%B2%AD-%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9" class="link-review" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 192 192">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 0H168C181.255 0 192 10.7451 192 24V168C192 181.255 181.255 192 168 192H24C10.7451 192 0 181.255 0 168V24C0 10.7451 10.7451 0 24 0ZM49 57.9199V65.48H67L80.6799 142.52L98.5 141.26C116.02 119.06 127.84 102.44 133.96 91.3999C140.2 80.24 143.32 70.9399 143.32 63.5C143.32 59.0601 142 55.7 139.36 53.4199C136.84 51.1399 133.66 50 129.82 50C122.62 50 116.62 53.0601 111.82 59.1799C116.5 62.3 119.68 64.8799 121.36 66.9199C123.16 68.8401 124.06 71.4199 124.06 74.6599C124.06 80.0601 122.44 86.1799 119.2 93.02C116.08 99.8601 112.66 105.92 108.94 111.2C106.54 114.56 103.48 118.7 99.76 123.62L88.0601 57.2C87.1001 52.3999 84.1001 50 79.0601 50C76.78 50 72.3999 50.96 65.9199 52.8799C59.4399 54.6799 53.8 56.3601 49 57.9199Z"></path>
+                        </svg>
+                        code review
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://seona-cha.github.io/andar/" data-img="#img2" target="_blank">
+                        <figure class="img-box">
+                            <img src="./assets/images/andar.jpg" alt>
+                        </figure>
+                        <div class="text-box">
+                            <strong class="title">ANDAR Mobile</strong>
+                            <p class="desc">웹 표준에 근거한 시멘틱 태그를 사용하여 탄탄한 짜임새의 마크업과, <br>공통 레이아웃은 같은 클래스명을 할당해 효율적인 CSS 레이아웃을 구성한 모바일 클론코딩 사이트입니다.</p>
+                            <p class="hash">
+                                <span>#Mobile</span>
+                                <span>#적응형</span>
+                                <span>#시멘틱 웹</span>
+                                <span>#swiper.js 커스텀</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="https://velog.io/@peche0345/ANDAR-Mobile-%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9" class="link-review" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 192 192">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 0H168C181.255 0 192 10.7451 192 24V168C192 181.255 181.255 192 168 192H24C10.7451 192 0 181.255 0 168V24C0 10.7451 10.7451 0 24 0ZM49 57.9199V65.48H67L80.6799 142.52L98.5 141.26C116.02 119.06 127.84 102.44 133.96 91.3999C140.2 80.24 143.32 70.9399 143.32 63.5C143.32 59.0601 142 55.7 139.36 53.4199C136.84 51.1399 133.66 50 129.82 50C122.62 50 116.62 53.0601 111.82 59.1799C116.5 62.3 119.68 64.8799 121.36 66.9199C123.16 68.8401 124.06 71.4199 124.06 74.6599C124.06 80.0601 122.44 86.1799 119.2 93.02C116.08 99.8601 112.66 105.92 108.94 111.2C106.54 114.56 103.48 118.7 99.76 123.62L88.0601 57.2C87.1001 52.3999 84.1001 50 79.0601 50C76.78 50 72.3999 50.96 65.9199 52.8799C59.4399 54.6799 53.8 56.3601 49 57.9199Z"></path>
+                        </svg>
+                        code review
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://seona-cha.github.io/enterprise/" data-img="#img3" target="_blank">
+                        <figure class="img-box">
+                            <img src="./assets/images/enterprise.jpg" alt>
+                        </figure>
+                        <div class="text-box">
+                            <strong class="title">Enterprise<br>Blockchain</strong>
+                            <p class="desc">GSAP과 ScrollTrigger 플러그인을 사용해 인터렉션을 구현하는데 포커스를 두고 클론코딩한 사이트입니다. </p>
+                            <p class="hash">
+                                <span>#PC</span>
+                                <span>#세미반응형</span>
+                                <span>#시멘틱 웹</span>
+                                <span>#GSAP</span>
+                                <span>#ScrollTrigger</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="https://velog.io/@peche0345/%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8" class="link-review" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 192 192">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 0H168C181.255 0 192 10.7451 192 24V168C192 181.255 181.255 192 168 192H24C10.7451 192 0 181.255 0 168V24C0 10.7451 10.7451 0 24 0ZM49 57.9199V65.48H67L80.6799 142.52L98.5 141.26C116.02 119.06 127.84 102.44 133.96 91.3999C140.2 80.24 143.32 70.9399 143.32 63.5C143.32 59.0601 142 55.7 139.36 53.4199C136.84 51.1399 133.66 50 129.82 50C122.62 50 116.62 53.0601 111.82 59.1799C116.5 62.3 119.68 64.8799 121.36 66.9199C123.16 68.8401 124.06 71.4199 124.06 74.6599C124.06 80.0601 122.44 86.1799 119.2 93.02C116.08 99.8601 112.66 105.92 108.94 111.2C106.54 114.56 103.48 118.7 99.76 123.62L88.0601 57.2C87.1001 52.3999 84.1001 50 79.0601 50C76.78 50 72.3999 50.96 65.9199 52.8799C59.4399 54.6799 53.8 56.3601 49 57.9199Z"></path>
+                        </svg>
+                        code review
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://seona-cha.github.io/oliveyoung-pc" data-img="#img4" target="_blank">
+                        <figure class="img-box">
+                            <img src="./assets/images/oliveyoung-pc.jpg" alt>
+                        </figure>
+                        <div class="text-box">
+                            <strong class="title">Olive young <span>(PC)</span></strong>
+                            <p class="desc">JSON 비동기 통신을 이용해 데이터를 바인딩해 클론코딩한 적응형 PC 온라인 쇼핑몰입니다.</p>
+                            <p class="hash">
+                                <span>#PC</span>
+                                <span>#적응형</span>
+                                <span>#시멘틱 웹</span>
+                                <span>#비동기통신</span>
+                                <span>#JSON</span>
+                                <span>#Swiper.js 커스텀</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="https://velog.io/@peche0345/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%A0%81%EC%9D%91%ED%98%95-PC-Mobile" class="link-review" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 192 192">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 0H168C181.255 0 192 10.7451 192 24V168C192 181.255 181.255 192 168 192H24C10.7451 192 0 181.255 0 168V24C0 10.7451 10.7451 0 24 0ZM49 57.9199V65.48H67L80.6799 142.52L98.5 141.26C116.02 119.06 127.84 102.44 133.96 91.3999C140.2 80.24 143.32 70.9399 143.32 63.5C143.32 59.0601 142 55.7 139.36 53.4199C136.84 51.1399 133.66 50 129.82 50C122.62 50 116.62 53.0601 111.82 59.1799C116.5 62.3 119.68 64.8799 121.36 66.9199C123.16 68.8401 124.06 71.4199 124.06 74.6599C124.06 80.0601 122.44 86.1799 119.2 93.02C116.08 99.8601 112.66 105.92 108.94 111.2C106.54 114.56 103.48 118.7 99.76 123.62L88.0601 57.2C87.1001 52.3999 84.1001 50 79.0601 50C76.78 50 72.3999 50.96 65.9199 52.8799C59.4399 54.6799 53.8 56.3601 49 57.9199Z"></path>
+                        </svg>
+                        code review
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://seona-cha.github.io/oliveyoung-mobile" data-img="#img5" target="_blank">
+                        <figure class="img-box">
+                            <img src="./assets/images/oliveyoung-mobile.jpg" alt>
+                        </figure>
+                        <div class="text-box">
+                            <strong class="title">Olive young <span>(Mobile)</span></strong>
+                            <p class="desc">JSON 비동기 통신을 이용해 데이터를 바인딩해 클론코딩한 적응형 모바일 쇼핑몰입니다.</p>
+                            <p class="hash">
+                                <span>#Mobile</span>
+                                <span>#적응형</span>
+                                <span>#시멘틱 웹</span>
+                                <span>#비동기통신</span>
+                                <span>#JSON</span>
+                                <span>#Swiper.js 커스텀</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="https://velog.io/@peche0345/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%A0%81%EC%9D%91%ED%98%95-PC-Mobile" class="link-review" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 192 192">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 0H168C181.255 0 192 10.7451 192 24V168C192 181.255 181.255 192 168 192H24C10.7451 192 0 181.255 0 168V24C0 10.7451 10.7451 0 24 0ZM49 57.9199V65.48H67L80.6799 142.52L98.5 141.26C116.02 119.06 127.84 102.44 133.96 91.3999C140.2 80.24 143.32 70.9399 143.32 63.5C143.32 59.0601 142 55.7 139.36 53.4199C136.84 51.1399 133.66 50 129.82 50C122.62 50 116.62 53.0601 111.82 59.1799C116.5 62.3 119.68 64.8799 121.36 66.9199C123.16 68.8401 124.06 71.4199 124.06 74.6599C124.06 80.0601 122.44 86.1799 119.2 93.02C116.08 99.8601 112.66 105.92 108.94 111.2C106.54 114.56 103.48 118.7 99.76 123.62L88.0601 57.2C87.1001 52.3999 84.1001 50 79.0601 50C76.78 50 72.3999 50.96 65.9199 52.8799C59.4399 54.6799 53.8 56.3601 49 57.9199Z"></path>
+                        </svg>
+                        code review
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://seona-cha.github.io/naver/" data-img="#img6" target="_blank">
+                        <figure class="img-box">
+                            <img src="./assets/images/naver.jpg" alt>
+                        </figure>
+                        <div class="text-box">
+                            <strong class="title">NAVER</strong>
+                            <p class="desc">IR기법, WAI-ARIA를 사용해 웹접근성에 더욱 중점을 두고 클론코딩한 사이트입니다.</p>
+                            <p class="hash">
+                                <span>#PC버전</span>
+                                <span>#적응형</span>
+                                <span>#시멘틱 웹</span>
+                                <span>#IR기법</span>
+                                <span>#WAI-ARIA</span>
+                                <span>#웹접근성</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="https://velog.io/@peche0345/%EB%84%A4%EC%9D%B4%EB%B2%84-%EB%A9%94%EC%9D%B8-%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9" class="link-review" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 192 192">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 0H168C181.255 0 192 10.7451 192 24V168C192 181.255 181.255 192 168 192H24C10.7451 192 0 181.255 0 168V24C0 10.7451 10.7451 0 24 0ZM49 57.9199V65.48H67L80.6799 142.52L98.5 141.26C116.02 119.06 127.84 102.44 133.96 91.3999C140.2 80.24 143.32 70.9399 143.32 63.5C143.32 59.0601 142 55.7 139.36 53.4199C136.84 51.1399 133.66 50 129.82 50C122.62 50 116.62 53.0601 111.82 59.1799C116.5 62.3 119.68 64.8799 121.36 66.9199C123.16 68.8401 124.06 71.4199 124.06 74.6599C124.06 80.0601 122.44 86.1799 119.2 93.02C116.08 99.8601 112.66 105.92 108.94 111.2C106.54 114.56 103.48 118.7 99.76 123.62L88.0601 57.2C87.1001 52.3999 84.1001 50 79.0601 50C76.78 50 72.3999 50.96 65.9199 52.8799C59.4399 54.6799 53.8 56.3601 49 57.9199Z"></path>
+                        </svg>
+                        code review
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="sc-contact" id="contact">
+            <h2 class="blind">contact</h2>
+            <div class="group-display">
+                <div class="group-bg" id="grain-bg"></div>
+                <div class="text-box">
+                    <p>
+                        탄탄한 마크업을 통한 직관적이고 명확한 구조의 사이트를 설계하고, 다양한 인터렉션 기술들을 유연하게 활용함으로써 질적으로 가치있는 사용자 경험과 흥미를 동시에 이끌어 내는 사람이 되고 싶습니다.
+                    </p>
+                    <p>
+                        스스로에게 한계를 두지 않고 끊임없이 성장하는 퍼블리셔가 되겠습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <p></p>
+        </section>
+    </main>
+    <footer class="footer">
+        <h2 class="blind">FOOTER</h2>
+        <div class="marquee lets">
+            <span>LET'S WORK</span>
+            <span>LET'S WORK</span>
+            <span>LET'S WORK</span>
+            <span>LET'S WORK</span>
+            <span>LET'S WORK</span>
+            <span>LET'S WORK</span>
+            <span>LET'S WORK</span>
+            <span>LET'S WORK</span>
+        </div>
+        <div class="marquee together">
+            <span>TOGETHER</span>
+            <span>TOGETHER</span>
+            <span>TOGETHER</span>
+            <span>TOGETHER</span>
+            <span>TOGETHER</span>
+            <span>TOGETHER</span>
+            <span>TOGETHER</span>
+            <span>TOGETHER</span>
+        </div>
+        <address>
+            <strong>Phone</strong>
+            +82 010-3917-5026
+            <strong>E-mail</strong>
+            peche0345@naver.com
+        </address>
+        <small>&copy; 2023. Cha-Seona All Rights Reserved.</small>
+    </footer>
+    <div class="cursor">
+        <div class="img-box">
+            <div id="img1" class="image">
+                <img src="./assets/images/seoul.jpg" alt>
+            </div>
+            <div id="img2" class="image">
+                <img src="./assets/images/andar.jpg" alt>
+
+            </div>
+            <div id="img3" class="image">
+                <img src="./assets/images/enterprise.jpg" alt>
+
+            </div>
+            <div id="img4" class="image">
+                <img src="./assets/images/oliveyoung-pc.jpg" alt>
+
+            </div>
+            <div id="img5" class="image">
+                <img src="./assets/images/oliveyoung-mobile.jpg" alt>
+
+            </div>
+            <div id="img6" class="image">
+                <img src="./assets/images/naver.jpg" alt>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

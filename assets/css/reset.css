@@ -1,0 +1,31 @@
+:root{
+    --font-en:Montserrat,'Noto Sans KR', sans-serif;
+    --font-kr: 'Noto Sans KR', sans-serif;
+}
+
+*{margin:0;padding:0;font:inherit;color:inherit;}
+*, :after, :before {box-sizing:border-box;flex-shrink:0;}
+
+html, body {height:100%; line-height: 1;}
+img, picture, video, canvas, svg {display: block;max-width:100%;}
+button {background:none;border:0;cursor:pointer;}
+a {text-decoration:none}
+ul{list-style:none;}
+table {border-collapse:collapse;border-spacing:0}
+
+html{
+    width: 100%;
+    scroll-behavior:smooth;
+}
+body{
+    font-family: var(--font-kr);
+    letter-spacing:-0.025em;
+    color:#000;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+::selection{
+    background: #b99dcf;
+    color:#000
+}
