@@ -627,10 +627,10 @@ body.dark{
         font-size: 33px;
     }
     .sc-work .work-item a:first-child{
-        padding-bottom: 0px;
+        padding: 20px 5px 0px;
     }
     .sc-work .work-item a:first-child:hover{
-        padding-bottom: 0px;
+        padding: 20px 5px 0px;
     }
     .sc-work .work-item .text-box{
         padding: 0 10px ;
