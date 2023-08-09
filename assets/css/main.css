@@ -577,7 +577,7 @@ body.dark{
         font-size: 10px; 
         margin: 0;
     }
-    .sc-intro .text-box .mini-text{
+    .sc-intro .text-box .mini-text br{
         display: inline;
     }
     .sc-intro .img-box{
