@@ -87,14 +87,14 @@ body.dark{
     position: absolute;
     bottom: 0px; left: 50%;
     width: 3px;
-    height: 210px;
+    height: 170px;
     background: #000;
     animation: line 0.7s infinite alternate;
 }
 
 @keyframes line{
-    from{ height:210px;}
-    to{ height:190px;}
+    from{ height:170px;}
+    to{ height:150px;}
 }
 
 /* intro-img */
