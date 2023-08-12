@@ -1,6 +1,5 @@
 :root{
-    --font-en:Montserrat,'Noto Sans KR', sans-serif;
-    --font-kr: 'Noto Sans KR', sans-serif;
+    --font-en:Montserrat,'Pretendard', sans-serif;
 }
 
 *{margin:0;padding:0;font:inherit;color:inherit;}
@@ -22,10 +21,10 @@ html{
 }
 body{
     width: 100%;
-    overflow-x: scroll;
-    font-family: var(--font-kr);
+    font-family: 'Helvetica', 'Pretendard', sans-serif;
     letter-spacing:-0.025em;
-    color:#000;
+    background: #000;
+    color:#fff;
     font-size: 16px;
 }
 

@@ -8,7 +8,24 @@ document.addEventListener('mousemove',(e) => {
     cursor.animate({
         top : `${e.clientY}px`, left : `${e.clientX}px`
     },1000)
+
+    // 마우스 좌표값 구하기
+    document.querySelector('.deco-wrap .mouse .x').innerHTML = `${e.clientX}`
+    document.querySelector('.deco-wrap .mouse .y').innerHTML = `${e.clientY}`
 });
+
+// 현재 시간
+
+setInterval(() => {
+    const date = new Date();
+    const hours = ('0' + date.getHours()).slice(-2);
+    const minutes = ('0' + date.getMinutes()).slice(-2);
+    const seconds = ('0' + date.getSeconds()).slice(-2);
+    const timeStr = hours + ':' + minutes + ':' + seconds;
+
+    document.querySelector('.deco-wrap .time').innerHTML = timeStr
+}, 1000);
+
 // 마우스 클릭
 document.addEventListener('mousedown',()=>{ 
     cursor.classList.add('clicked'); 
@@ -56,91 +73,82 @@ $('.nav').click((e)=>{
     $('body').toggleClass('dimmed');
 })
 
-// 인트로 
+// 인트로 애니메이션
 const intro = gsap.timeline();
 intro
-    .from(".sc-intro ",{backgroundColor:"#000", delay:0.5, duration:0.6})
     .addLabel('a')
-    .from(".sc-intro .sub-text",{autoAlpha:0, x:200, duration:0.5},'a')
-    .from(".sc-intro .main-text",{autoAlpha:0, x:-200, duration:0.5},'a')
-    .from(".sc-intro .mini-text",{autoAlpha:0, y:50, rotate:10, delay:0.5,duration:0.4},'a')
-    .from(".sc-intro .img-box",{autoAlpha:0, y:50,duration:0.2},)
-    .from(".sc-intro .line",{opacity:0, y:-50})
+    .from(".sc-intro .text:first-child",{autoAlpha:0, x:-180, duration:1.5,delay:1},'a')
+    .from(".sc-intro .particle2",{rotate:360,autoAlpha:0,duration:0.2,delay:1.7},'a')
+    .from(".sc-intro .main-text",{autoAlpha:0, x:-90,delay:1.25, duration:1.5},'a')
+    .from(".sc-intro .text:nth-child(3)",{autoAlpha:0, x:-45,delay:1.5,duration:1.5},'a')
+    .from(".sc-intro .particle3",{rotate:-180,autoAlpha:0,duration:0.2,delay:2.2},'a')
+    .from(".sc-intro .mini-text",{autoAlpha:0, y:50, rotate:5, delay:2.5,duration:0.6},'a')
+    .from(".sc-intro .img-box",{autoAlpha:0,yPercent:30,duration:0.4,delay:3.5},'a')
+    
+const intro2 = gsap.timeline();
+intro2
+    .addLabel('a')
+    .to(".sc-intro .particle1",{autoAlpha:0, scale:1.8, yPercent:-30},'a')
+    .fromTo(".sc-intro .particle2",{rotate:0,xPercent:0,yPercent:0},{rotate:-30,xPercent:15,yPercent:10,duration:1},'a')
+    .fromTo(".sc-intro .particle3",{rotate:0},{rotate:10,duration:1},'a')
+    .fromTo(".sc-intro .img-box",{rotate:0,yPercent:0},{rotate:2,yPercent:8,duration:1},'a')
+    
 ScrollTrigger.create({
-    animation: intro,
+    animation: intro2,
     trigger: ".sc-intro",
-    start: "top 20%",
-    scrub: false,
+    start: "50% 40%",
+    end: "bottom 40%",
+    scrub: true,
     pin: false,
     markers: false
 });
 
-// 그레인 애니메이션
-var options = {
-    animate: true,
-    patternWidth: 200,
-    patternHeight: 200,
-    grainOpacity: 0.04,
-    grainDensity: 2,
-    grainWidth: 3,
-    grainHeight: 3
-  };
 
-grained("#home", options);
 
-// 로켓 패럴랙스 효과
-const rocket = gsap.timeline();
-rocket
-    .fromTo(".sc-intro .img-box img",{yPercent:10},{yPercent:-10});
-
+// ABOUT 롤링 
+const marquee = gsap.timeline();
+marquee
+    .addLabel('a')
+    .from(".sc-about .marquee1 .wrap",{xPercent:-90},'a')
+    .to(".sc-about .marquee2 .wrap",{xPercent:-50},'a')
+    .from(".sc-about .marquee3 .wrap",{xPercent:-70},'a')
 ScrollTrigger.create({
-    animation: rocket,
-    trigger: ".sc-intro .img-box",
-    start: "-30% 50%",
-    end:"+=700",
+    animation: marquee,
+    trigger: ".sc-about",
+    start: "top 80%",
+    end: "150% 60%",
     scrub: true,
     pin: false,
-    markers: false,
+    markers: false
 });
-// 틸트 효과
-$('.mini-text').tilt({
-    glare: false,
-    maxTilt: 20,
-    perspective: 1500, 
-    scale: 1,   
-    speed: 400,  
-    disableAxis: null,  
-    reset: true, 
-});
-
-
-
-// body theme 변경
+// ABOUT PARTICLE
+const aboutParticle = gsap.timeline();
+aboutParticle
+    .addLabel('a')
+    .fromTo(".sc-about .particle",{rotate:-80, xPercent:100, yPercent:200},{rotate:20, xPercent:-10, yPercent:-10},'a')
 ScrollTrigger.create({
-    trigger: ".sc-about",
-    start: "top 60%",
-    onEnter:()=>{
-        $('body').addClass('dark');
-        $('.header').addClass('white');
-    },
-    onLeaveBack:()=>{
-        $('body').removeClass('dark');
-        $('.header').removeClass('white');
-    }
+    animation: aboutParticle,
+    trigger: ".sc-about .particle-wrap",
+    start: "top 80%",
+    end: "top 15%",
+    scrub: true,
+    pin: false,
+    markers: false
 });
-
-$('.code').tilt({
-    glare: true,
-    maxGlare: .2,
-    maxTilt: 20,
-    perspective: 1500, 
-    scale: 1,   
-    speed: 400,  
-    disableAxis: null,  
-    reset: true, 
+// WORK PARTICLE
+const workParticle = gsap.timeline();
+workParticle
+    .addLabel('a')
+    .from(".sc-work .particle",{xPercent:-30, yPercent:-40,rotate:15},'a')
+ScrollTrigger.create({
+    animation: workParticle,
+    trigger: ".sc-work .particle-wrap",
+    start: "top 100%",
+    end: "top 35%",
+    scrub: true,
+    pin: false,
+    markers: false
 });
-
-
 
 // 커서 이동시 이미지박스 함께 이동
 document.addEventListener('mousemove',(e) => { 
@@ -172,17 +180,21 @@ workLinks.forEach(i=>{
 })
 
 
-grained("#grain-bg", options);
-
-
-// contact
-const contact = gsap.timeline();
-contact
-    .to(".sc-contact .group-display",{autoAlpha:1})
+// 푸터 스크롤트리거
+const footer = gsap.timeline();
+footer
+    .addLabel('a')
+    .to(".deco-wrap .mouse",{autoAlpha:0, duration:1.2},'a')
+    .from(".footer .particle1",{autoAlpha:0.6,rotate:5,xPercent:10,yPercent:-10,duration:10},'a')
+    .to(".footer .particle2",{autoAlpha:0.8, xPercent:20,rotate:10,scale:1.05,duration:20},'a')
+    .from(".footer .particle3",{rotate:-5,xPercent:-40,yPercent:100,duration:20},'a')
+    
 ScrollTrigger.create({
-    animation:contact,
-    trigger: ".sc-contact",
-    start: "top 100%",
-    end:"top top",
-    scrub:true,
+    animation: footer,
+    trigger: ".footer",
+    start: "0% 50%",
+    end:"60% 50%",
+    scrub: true,
+    pin: false,
+    markers: false
 });

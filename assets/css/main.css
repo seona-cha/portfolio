@@ -1,12 +1,3 @@
-body{
-    background: #d9c6e9;
-    color: #000;
-    transition:0.3s
-}
-body.dark{
-    background: #000;
-    color: #fff;
-}
 /* intro */
 .sc-intro{
     display: flex;
@@ -17,118 +8,97 @@ body.dark{
     width: 100%;
     height: 100vh;
 }
-.sc-intro::after{
-    display: block;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../images/background.jpg) no-repeat center / cover;
-    opacity: 0.8;
-    content: '';
-}
+
 .sc-intro .text-box{
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 1400px;
+    width: 1200px;
     height: 100vh;
     padding: 100px 0;
-    font-family: var(--font-en);
-    transform:rotateX(-20deg) rotateY(20deg)
 }
-.sc-intro .text-box p{
-    white-space: nowrap;
-    letter-spacing:-0.04em;
-}
-.sc-intro .text-box .row{
-    display: flex;
-    align-items: start;
-}
-.sc-intro .main-text{
+.sc-intro .text{
     position: relative;
     text-transform: uppercase;
-    font-size: 200px;
-    font-weight: bold;
-}
-.sc-intro .main-text::before{
-    position: absolute;
-    top: 2px; left: 5px;
-    z-index: -1;
-    color: #fff;
-    content:'THE WEB';
-}
-.dark .sc-intro .main-text::before{
-    color: #532e75;
-}
-.sc-intro .sub-text{
-    padding-left: 250px;
     font-size: 150px;
-    text-transform: uppercase;
+    letter-spacing:-0.05em;
 }
-.sc-intro .text-box .mini-text{
+.sc-intro .main-text{
+    font-weight: 500;
+}
+.sc-intro .mini-text{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
     width: 275px;
+    margin-left: 220px;
     text-indent: 50px;
-    margin-left: 120px;
-    margin-top: 25px;
     font-family: var(--font-en);
+    font-size: 16px;
     color: #fff;
     word-break: keep-all;
-    white-space: wrap;
     text-transform: uppercase;
 }
 .sc-intro .text-box .mini-text br{
     display: none;
 }
-.sc-intro .line{
-    position: absolute;
-    bottom: 0px; left: 50%;
-    width: 3px;
-    height: 170px;
-    background: #000;
-    animation: line 0.7s infinite alternate;
-}
-
-@keyframes line{
-    from{ height:170px;}
-    to{ height:150px;}
-}
-
-/* intro-img */
 .sc-intro .img-box{
     position: absolute;
-    bottom: -70px; right: 5%;
-    z-index: 1;
-    width: 450px;
-    height: 550px;
-    border-radius: 200px;
-    overflow: hidden;
-    mix-blend-mode:lighten;
-    filter: contrast(200%);
-    background: #000
+    bottom: -300px;right: 100px;
+    width:470px;
 }
-.sc-intro .img-box img{
-    width: 110%;
-    height: 110%;
-    object-fit: cover;
+.sc-intro .particle-wrap{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
 }
-
+.sc-intro .particle{
+    position: absolute;
+}
+.sc-intro .particle1{
+    top: -550px;right: -10%;
+    width: 700px;
+    z-index: 2;
+    filter: blur(20px);
+    animation: particle1 2.5s infinite alternate ease-in-out;
+}
+@keyframes particle1 {
+    from{ margin-top: -30px; }
+    to{ margin: 0; }
+}
+.sc-intro .particle2{
+    top: 50%; left: 50%;
+    margin-top: -290px;
+    width: 120px;
+}
+.sc-intro .particle3{
+    top: 50%; left: 50%;
+    z-index: -1;
+    margin-top: 150px;
+    margin-left: -640px;
+    width: 120px;
+}
+.sc-intro .particle img{
+    width: 100%;
+}
 /* about */
 .sc-about{
     width: 100%;
     padding: 100px 0;
+    border-top: 1px solid #fff;
 }
 /* marquee banner */
 .sc-about .marquee-banner{
     display: flex;
     margin-left: -700px;
+    margin-bottom: 20px;
 }
 .sc-about .marquee-banner span{
     width: 700px;
-    animation: marquee 8s linear infinite running;
+    animation: marquee 7s linear infinite running;
     padding: 0;
     margin: 0;
     font-family: var(--font-en);
@@ -137,63 +107,35 @@ body.dark{
     white-space: nowrap;
     letter-spacing: -0.05em;
 }
+.sc-about .marquee{
+    display: flex;
+    white-space: nowrap;
+    padding: 40px 0;
+    font-size: 3vw;
+}
+.sc-about .marquee .wrap+.wrap{
+    padding-left: 20px;
+}
+.sc-about .marquee span.deco{
+    padding: 4px 50px;
+    border: 2px solid #fff;
+    border-radius: 48%;
+}
+.sc-about .marquee+.marquee{
+    border-top: 1px solid #fff;
+}
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-100%); }
 }
-.sc-about .inner{
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    width: 1400px;
-    margin: 100px auto 60px;
-}
-.sc-about .code{
-    overflow: hidden;
-    font-size: 20px;
-    background: rgba(0,0,0,0.6);
-    border-radius: 10px;
-    color: #fff;
-}
-.dark .sc-about .code{
-    background: rgba(99,99,99,0.3);
-}
-.sc-about .text-box pre{
+.sc-about .particle-wrap{
     position: relative;
-    line-height:30px;
-    padding: 30px 30px 30px 50px;
 }
-.sc-about .text-box pre:before{
-    display: block;
+.sc-about .particle{
     position: absolute;
-    top: 0;
-    left: 8px;
-    width: 14px;
-    height: 100%;
-    font-size: 14px;
-    color: rgba(255,255,255,0.3);
-    text-align: right;
-    white-space: wrap;
-    content:'1 2 3 4 5 6 7 8 9 10 11'
-}
-.sc-about .purple{color: #dd23ce;}
-.sc-about .yellow{color: #f8eb3b;}
-.sc-about .orange{color: #d88e6c;}
-.sc-about .sky{color: #8edafd;}
-.sc-about .green{color: #a1df8f;}
-.sc-about .desc{
-    margin-top: 20px;
-    font-size: 24px;
-    line-height: 36px;
-}
-.sc-about .desc .hi{
-    display: inline-block;
-    animation: hi 0.9s infinite alternate;
-}
-@keyframes hi{
-    0%{transform: rotate(0deg) translate(-7px,-2px);}
-    30%{transform: rotate(20deg) translate(-7px,-2px);}
-    100%{transform: rotate(0deg) translate(-7px,-2px);}
+    bottom: -500px; right: -30px;
+    z-index: 10;
+    width: 200px;
 }
 /* work */
 .sc-work{
@@ -216,6 +158,12 @@ body.dark{
     padding: 50px 0;
     text-align: center;
 }
+.sc-work .latest{
+    padding-top: 300px;
+}
+.sc-work .latest::before{
+    top: 50px;
+}
 .sc-work .work-list{
     width: 90%;
     margin: 0 auto;
@@ -228,13 +176,33 @@ body.dark{
     width: 100%;
     border-bottom: 1px solid rgba(255,255,255,0.3);
 }
+.sc-work .add{
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0;
+    font-size: 18px;
+    text-align: right;
+    line-height: 24px;
+}
+.sc-work .particle-wrap {
+    position: relative;
+}
+.sc-work .particle{
+    position: absolute;
+    top: -200px;
+    left: 1%;
+    width: 130px;
+}
+.sc-work .particle img{
+    width: 100%;
+}
 /* 사이트 링크 */
 .sc-work .work-item a:first-child{
     flex: 1;
     display: block;
     position: relative;
     padding: 86px 30px 100px 200px;
-    transition: 0.8s ease-out;
+    transition: padding 0.8s ease-out;
 }
 .sc-work .work-item a:first-child:before{
     position: relative;
@@ -352,58 +320,33 @@ body.dark{
     transform: scale(1.0);
 }
 
-/* CONTACT */
-.sc-contact {
-    width: 100%;
-    height: 100vh;
-}
-.sc-contact .group-bg{
-    width: 100vw;
-    height: 100vh;
-    background: url(../images/background.jpg) no-repeat center / cover;
-    opacity: 0.3;
-}
-.sc-contact .group-display{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index:-99;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-}
-.sc-contact .text-box{
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1300px;
-    font-size: 30px;
-    line-height: 40px;
-    word-break: keep-all;
-    text-align: center;
-}
-.sc-contact p { margin-top: 20px; }
 
 @media (max-width:1480px) {
     
     /* intro */
-    .sc-intro .text-box { width: 900px; }
-    .sc-intro .main-text { font-size: 120px; }
-    .sc-intro .sub-text { font-size: 100px; }
+    .sc-intro .text-box { width: 1000px; }
+    .sc-intro .text { font-size: 120px; }
     .sc-intro .text-box .mini-text { 
         width: 240px;
         font-size: 14px; 
         text-indent: 30px;
     }
-
-    @keyframes line{
-        from{ height:100px;}
-        to{ height:90px;}
-    }
     .sc-intro .img-box{
-        width: 350px;
-        height: 490px;
+        bottom: -200px;right: 70px;
+        width:400px;
+    }
+    .sc-intro .particle1{
+        top: -460px;right: -10%;
+        width: 600px;
+    }
+    .sc-intro .particle2{
+        margin-top: -230px;
+        width: 90px;
+    }
+    .sc-intro .particle3{
+        margin-top: 110px;
+        margin-left: -540px;
+        width: 90px;
     }
     /* about */
     .sc-about .marquee-banner{ margin-left: -540px; }
@@ -411,20 +354,27 @@ body.dark{
         width: 540px;
         font-size: 90px;
     }
-    .sc-about .inner{ width: 900px; }
-    .sc-about .code{
-        width: 650px;
-        font-size: 14px;
+    .sc-about .marquee span.deco{
+        padding: 4px 40px;
     }
-    .sc-about .desc{ font-size: 20px; }
-    .sc-about .img-box{ width: 380px; }
-
+    .sc-about .particle{
+        bottom: -490px;
+        width: 150px;
+    }
     /* work */
     .sc-work .work-item a:first-child{
         padding: 66px 10px 80px 140px;
     }
     .sc-work .work-item a:first-child:hover{
         padding: 86px 30px 100px 70px;
+    }
+    .sc-work .add{
+        font-size: 16px;
+    }
+    
+    .sc-work .particle{
+        top: -190px;
+        width: 100px;
     }
     .sc-work .work-item a:first-child:before{ top: 20px; left: -40px; }
     .sc-work .title{ font-size: 45px; }
@@ -451,30 +401,34 @@ body.dark{
     .cursor .img-box { width: 450px; }
     .cursor .img-box.on { height: 300px; }
 
-    /* CONTACT */
-    .sc-contact .text-box {
-        width: 850px;
-        font-size: 24px;
-    }
 }
 
 @media (max-width:1079px){
     /* intro */
     .sc-intro .text-box { width: 650px; }
-    .sc-intro .main-text { font-size: 95px; }
-    .sc-intro .sub-text { 
-        font-size: 80px; 
-        padding-left: 80px;
-    }
+    .sc-intro .text { font-size: 95px; }
     .sc-intro .text-box .mini-text { 
         width: 180px;
-        margin-top: 15px;
-        margin-left: 50px;
+        margin-left: 200px;
         font-size: 10px; 
     }
     .sc-intro .img-box{
-        width: 280px;
-        height: 380px;
+        bottom: -150px;right: 0px;
+        width:350px;
+    }
+    .sc-intro .particle1{
+        top: -380px;right: -10%;
+        width: 500px;
+    }
+    .sc-intro .particle2{
+        margin-top: -180px;
+        margin-left: 60px;
+        width: 70px;
+    }
+    .sc-intro .particle3{
+        margin-top: 100px;
+        margin-left: -350px;
+        width: 70px;
     }
     /* about */
     .sc-about{ padding: 60px 0; }
@@ -483,17 +437,19 @@ body.dark{
         width: 360px;
         font-size: 60px;
     }
-    .sc-about .inner{
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin: 0 auto;
+    .sc-about .marquee{
+        padding: 40px 0;
     }
-    .sc-about .img-box{ 
-        width: 380px; 
-        margin-bottom: 20px;
+    .sc-about .marquee .wrap+.wrap{
+        padding-left: 20px;
     }
-    
+    .sc-about .marquee span.deco{
+        padding: 4px 30px;
+    }
+    .sc-about .particle{
+        bottom: -440px;
+        width: 120px;
+    }
     /* work */
     .sc-work .work-item {
         flex-direction: column;
@@ -511,6 +467,13 @@ body.dark{
     .sc-work .work-item a:first-child:hover{
         padding: 30px 20px;
         background: none;
+    }
+    .sc-work .add{
+        font-size: 16px;
+    }
+    .sc-work .particle{
+        top: -180px;
+        width: 80px;
     }
     .sc-work .link-review{
         justify-content: end;
@@ -554,24 +517,18 @@ body.dark{
     /* 이미지 박스 */
     .cursor .img-box { display: none;}
 
-    /* contact */
-    .sc-contact .text-box{
-        width: 700px;
-        font-size: 22px;
-    }
 }
 
 @media (max-width:719px){
     /* intro */
-    .sc-intro .text-box { width: 320px; }
-    .sc-intro .main-text { font-size: 60px; }
-    .sc-intro .sub-text { 
-        font-size: 45px;
-        padding-left: 60px;
+    .sc-intro .text-box { 
+        width: 320px;
+        margin-top: -50px; 
     }
+    .sc-intro .text { font-size: 60px; }
     .sc-intro .text-box .mini-text { 
         position: absolute;
-        top: calc(50% + 100px); left: 0;
+        top: calc(50% + 130px); left:70%;
         width: 180px;
         height: auto;
         white-space: wrap;
@@ -582,8 +539,21 @@ body.dark{
         display: inline;
     }
     .sc-intro .img-box{
-        width: 240px;
-        height: 350px;
+        bottom: -110px;right: 20px;
+        width:180px;
+    }
+    .sc-intro .particle1{
+        top: -400px; left: -40%;
+    }
+    .sc-intro .particle2{
+        margin-top: -170px;
+        margin-left: 80px;
+        width: 50px;
+    }
+    .sc-intro .particle3{
+        margin-top: 10px;
+        margin-left: -180px;
+        width: 50px;
     }
     /* about */
     .sc-about{ padding: 40px 0; }
@@ -592,36 +562,16 @@ body.dark{
         width: 240px;
         font-size: 40px;
     }
-    .sc-about .inner{
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin: 0 auto;
+    
+    .sc-about .marquee{
+        padding: 25px 0;
     }
-    .sc-about .img-box{ 
-        width: 320px; 
-        margin-bottom: 20px;
+    .sc-about .marquee span.deco{
+        padding: 4px 18px;
     }
-    .sc-about .text-box{
-        width: 100%;
-        padding: 5%;
-    }
-    .sc-about .code{
-        width: 100%;
-        padding: 2.5%;
-        font-size: 10px;
-    }
-    .sc-about .code pre {
-        overflow-x: scroll;
-        padding: 0;
-    }
-    .sc-about .text-box pre:before{
-        display: none;
-    }
-    .sc-about .desc{ 
-        font-size: 14px;
-        line-height: 24px;
-        padding: 5%;
+    .sc-about .particle{
+        bottom: -400px; right: -15px;
+        width: 90px;
     }
     /* work */
     .sc-work .headline{
@@ -632,6 +582,16 @@ body.dark{
     }
     .sc-work .work-item a:first-child:hover{
         padding: 20px 5px 0px;
+    }
+    .sc-work .latest-list .work-item a:first-child{
+        padding-bottom: 30px;
+    }
+    .sc-work .add{
+        font-size: 14px;
+    }
+    .sc-work .particle{
+        top: -140px;
+        width: 60px;
     }
     .sc-work .work-item .text-box{
         padding: 0 10px ;
@@ -661,9 +621,4 @@ body.dark{
         height: 14px;
     }
     .sc-work .link-review{ font-size: 13px;}
-    /* contact */
-    .sc-contact .text-box{
-        width: 90%;
-        font-size: 16px;
-    }
 }
